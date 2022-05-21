@@ -1,0 +1,156 @@
+@import '../../global.scss';
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10%;
+}
+.login__common--card {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    min-height: 492px; 
+    margin-right: 24px; 
+    background-color: $default-white-color;
+    border-radius: 0px 0px 4px 4px;   
+    width: 451px;
+    
+    .loginForm {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10%;
+    }
+
+   .login__box-top {
+        background-image: url('../../Common/assets/sign-in-header.png');
+        background-position: top right;
+        background-repeat: no-repeat;
+        width: 95%;
+        height: 88px;
+        display: flex;
+        justify-content: flex-start;
+        background-size: contain;
+        background-color: $common-login-form-bg-color;
+        flex-direction: column;
+        padding-top: 24px;
+        padding-left: 24px;
+        border-radius: 4px 4px 0px 0px;
+
+        h3, h5, span {
+            color: $default-header-text-color;
+        }
+        span {
+            font-size: 13px;
+            font-weight: $font-semi-bold;
+            opacity: .8;
+        }
+    }
+}
+.login__box-bottom {
+    min-height: 380px;   
+    padding-bottom: 20px;
+
+    svg {
+        color: $default-a-color;
+        margin-right: 5px;
+        font-weight: $font-semi-bold-lighter;
+        font-size: 13px;
+    }
+
+    a {
+        color: $default-a-color;
+    }
+
+    .login__avatar--wrapper {
+        padding-left: 24px;
+
+        img {
+            border-radius: 50%;
+            width: 72px;
+            height: 72px;
+            border: 3px solid $default-white-color;
+            top: -20px;
+        }    
+    }
+    .login__input--wrappers {
+        margin-bottom: 20px;
+
+        label {
+            color: $label-text-color;
+            font-weight: $font-semi-bold;
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="password"] {
+            min-width: 395px;
+            border: 1px solid $input-text-color;
+            height: 36px;
+            border-radius: 4px;
+            padding-left: 12px;
+            margin-top: 10px;
+        }
+        input[type="password"] {
+            min-width: 383px;
+        }
+        input[type="text"]:focus-visible, input[type="password"]:focus-visible {
+            border: 1px solid $input-text-color;
+        }
+        input[type="checkbox"] {
+            border: 1px solid $checkbox-border-common-color;
+            margin-right: 8px;
+            top: 2px;
+        }   
+        
+        .auth__login--password {
+            svg {
+                display: none;
+            }
+        }
+    }
+}
+.login__common--card--extended {
+    min-height: 355px;
+
+    .login__box-bottom {
+        min-height: 215px;
+    }
+}
+.login__input--wrappers--bottom {
+    margin-top: 30px;
+    span {
+        margin-right: 5px;
+    }
+    a {
+        font-weight: $font-semi-bold;
+        color: $default-header-text-color;
+    }
+}
+
+.auth__common--btn {
+    height: 36px;
+    background: $default-header-text-color;
+    border-color: $default-header-text-color;
+    padding: 8px 12px;
+    width: 100%;
+    color: $default-white-color;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+
+    span {
+        font-size: $btn-title-font-size;
+        font-weight: $font-semi-bold-light;
+
+        &:hover {
+            font-weight: $font-semi-bold;
+        }
+    }
+    
+    &:hover {
+        background: $default-white-color;
+        border: 1px solid $default-header-text-color;
+        color: $default-header-text-color;            
+    }
+}
